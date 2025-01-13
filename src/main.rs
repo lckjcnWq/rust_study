@@ -1,3 +1,6 @@
+mod migrate;
+
 fn main() {
-    println!("Hello, world!");
+    // migrate::get_base_tuple();
+    migrate::get_base_array();
 }
