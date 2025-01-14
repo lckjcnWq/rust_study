@@ -5,6 +5,7 @@ use crate::migrate::*;
 mod migrate;
 mod controller;
 mod constructx;
+mod enumx;
 
 fn main() {
     /*get_base_tuple();
