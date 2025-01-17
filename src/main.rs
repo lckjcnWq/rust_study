@@ -6,6 +6,9 @@ mod migrate;
 mod controller;
 mod constructx;
 mod enumx;
+mod packagex;
+mod arraylistx;
+mod Typex;
 
 fn main() {
     /*get_base_tuple();
