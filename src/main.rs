@@ -12,6 +12,8 @@ mod Typex;
 mod testx;
 mod iterator;
 mod boxr;
+mod smartPointer;
+mod threadx;
 
 fn main() {
     /*get_base_tuple();
@@ -34,5 +36,8 @@ fn main() {
         rect1.area()
     ); */
 
-    boxr::test_box();
+    // boxr::test_box();
+
+    // smartPointer::test_pointer();
+    threadx::get_thread();
 }
