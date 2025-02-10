@@ -11,6 +11,7 @@ mod arraylistx;
 mod Typex;
 mod testx;
 mod iterator;
+mod boxr;
 
 fn main() {
     /*get_base_tuple();
@@ -23,7 +24,7 @@ fn main() {
     // get_base_first_word(&s);
 
     // get_base_user();
-    let rect1 = Rectangle {
+    /* let rect1 = Rectangle {
         width: 10,
         height: 20,
     };
@@ -31,5 +32,7 @@ fn main() {
     println!(
         "The area of the rectangle is {} square pixels.",
         rect1.area()
-    );
+    ); */
+
+    boxr::test_box();
 }
