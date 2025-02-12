@@ -4,3 +4,10 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+actix-web = "4.4.0"        # Web框架
+serde = { version = "1.0", features = ["derive"] } # 序列化
+tokio = { version = "1.0", features = ["full"] } # 异步运行时
+sqlx = { version = "0.7", features = ["postgres", "runtime-tokio"] } # 数据库
+dotenv = "0.15"            # 环境变量
+config = "0.13"            # 配置管理
+thiserror = "1.0"          # 错误处理

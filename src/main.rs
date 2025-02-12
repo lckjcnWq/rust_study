@@ -1,6 +1,8 @@
 use crate::constructx::{get_base_user, Rectangle};
 use crate::controller::get_base_first_word;
 use crate::migrate::*;
+use actix_web::{web, App, HttpResponse, HttpServer};
+use dotenv;
 
 mod migrate;
 mod controller;
@@ -14,6 +16,7 @@ mod iterator;
 mod boxr;
 mod smartPointer;
 mod threadx;
+mod db;
 
 fn main() {
     /*get_base_tuple();
@@ -40,4 +43,17 @@ fn main() {
 
     // smartPointer::test_pointer();
     threadx::get_thread();
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    dotenv().ok();
+    let pool = db::create_pool().await.expect("数据库连接失败");
+    
+    HttpServer::new(move || {
+        App::new()
+            .app_data(web::Data::new(pool.clone()))
+            // ...其他配置
+    })
+    // ...启动服务
 }
